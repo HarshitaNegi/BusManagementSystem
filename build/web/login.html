@@ -1,0 +1,144 @@
+<html>
+<head>
+   <title> Login Page </title>
+  <style>
+        body{
+               margin: 0;
+               background-image: url("bg.jpg");
+               background-repeat:no-repeat;
+               background-size: cover;
+               background-position: center;
+               opacity: 0.8;
+               
+            }
+        .header{
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #66ffff;
+                text-shadow: 2px 2px 4px #800000;
+               
+            }
+            .nav{
+               
+                 border-radius:40px;
+       	         padding:12px 24px;
+                 margin-top: 0px;
+                 display: flex; 
+                 margin-left: 1045px;
+                 background-color: #990000;
+                 display: block;
+                
+            }
+            .nav a{
+                text-align: right;
+                text-decoration: none;
+                 font-size: 15px;
+                color: white;
+            }
+            .nav a:hover{
+                color: yellow;
+                background-color: white;
+            }
+            .container{
+                
+                display: flex;
+                color: white;
+            }
+           
+            .right{  
+            background-image: url("rt.jpg");
+            font-size: 15px;
+            height:500px;
+            width:400px;
+            opacity: 1.0;
+            margin-left: 400px;
+            margin-right: 100px;
+            margin-bottom: 50px;
+            margin-top: 20px;
+            box-shadow:10px 10px 10px 10px grey;
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius:40px;
+       	    padding:12px 64px;
+            display: block;
+            }
+
+            .btn{
+            background-color:dodgerblue;
+            color:white;
+       	    border-radius:40px;
+       	    padding:12px 64px;
+       	    cursor:pointer;
+            display:block;
+           } 
+           .btn:hover{
+       	    transition-duration:1s;
+       	    transform:translate(0px,-5px);
+       	    box-shadow:0px 10px 30px black;              
+           }
+   </style>
+</head>
+<body>
+    <form name="MyForm" action="Logservlet" method="get" onsubmit="return myValidation()" style="border:1px solid">
+     <div class="header">
+       <h1>Bus Management System</h1>
+     </div>
+       
+       
+    
+    <div class="container">
+        
+        <div class="right">
+            <br><br><br><br>
+       <center> <label for="username"><b>Username</b></label>
+      <input style="height:40px; width:300px" type="text" placeholder="Enter username" name="username" ></center> <br>
+    <center><label for="pwd"><b>Password</b></label>
+    <input style="height:40px; width:300px" type="password" placeholder="Enter password" name="password" ><br>
+   </center><br>
+   <center><label for="usertype"><b>User Type</b></label>
+   <select style="height:40px; width:300px"  name="usertype">
+      <option>Enter usertype</option>
+       <option value="Student/Faculty">Student/Faculty</option>
+  <option value="Staff">Staff</option>
+  <option value="Admin">Admin</option>
+</select>
+    </center>
+
+   <br>
+   <center>
+    <label>
+      <input style="height:30px; width:100px; margin-bottom:15px" type="checkbox" checked="checked" name="remember"> Remember Me
+    </label>
+    </center>
+    <div class="clearfix">
+        <br>
+      <button type="submit" class="btn" >Login</button>
+      
+        </div>
+        </div>
+        </div>
+    </form>
+    <script>
+         function myValidation(){
+           var value = document.forms["MyForm"]["name"].value;
+            var value2 = document.forms["MyForm"]["pwd"].value;
+            var value3 = document.forms["MyForm"]["usertype"].value;
+           if(value == ""){
+            alert("Name cannot be empty");  
+            return false;
+           }
+           if(value2 == ""){
+            alert("Password cannot be empty");
+            return false;
+           }
+           if(value3 == "Enter usertype"){
+               alert("User type cannot be empty");
+               return false;
+           }
+         }
+           </script>
+</body>
+</html>

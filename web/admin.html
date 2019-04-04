@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Admin </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <style>
+            *{
+                margin : 0;
+            }
+        body{
+            background-image: url("bus.jpg");
+            background-repeat:no-repeat;
+            background-size: cover;
+         
+  }
+        .h1{
+                margin-top: 10px;
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-shadow: 2px 2px 4px yellow;  
+            }
+            .container{
+            height: 350px;
+          margin:0;
+            
+
+    }
+    .left{
+
+      box-sizing: border-box;
+      width: 20%;
+      height: 190%;
+      background-color: #ff9900;
+      float: left;
+      margin-left: 0px;
+      padding: 10px;
+      opacity: 0.8;
+
+    }
+    .right{
+      box-sizing: border-box;
+      margin-left: 0%; 
+      margin-right: 0px;
+      width: 1029px;
+      height: 190%;
+      float: left;
+                       
+      background-image: url("bus.jpg");
+      padding: 20px;
+    }
+          .btn{
+           opacity: 0.6;
+           margin-top: 50px;
+           width:428px;    
+           background-color:whitesmoke; 
+           color:#ff3300;
+           font-size: 20px;
+           border:none;
+           padding:10px 20px;
+           cursor:pointer;
+           float:left;
+           } 
+
+           .btn:hover{
+               background-color:#ff9900;
+           }  
+  
+        .test
+       {
+        position:relative;
+        top:20px;
+        left:0px;
+       }
+       .btnn
+       {
+         animation-name:ani;
+        animation-duration: 1s;
+        animation-fill-mode: backwards;
+        opacity: 0.9;
+        background-color:#660000;
+        color:white;
+        border-radius:10px;
+        padding:12px 24px;
+        cursor:pointer;
+        display:block;
+        width:100%;
+       }
+                @keyframes ani{
+             0%{
+                 opacity: 0;
+                 transform: translate(0px,0px);
+             }
+              
+             100%{
+                 opacity: 1;
+                 transform: translate(30px,0px);   
+             }
+         }
+       .btnn:hover
+       {
+        transition-duration:1s;
+        transform:translate(0px,-5px);
+        box-shadow:0px 10px 30px black;              
+       }
+       .h2{
+        margin-top: 100px;
+        font-size: 30px;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin-left: 10px;
+        color: white;
+        text-shadow: 2px 2px 4px yellow;  
+        }
+        .default{
+            background:red;
+        }
+        .create{
+        }
+           
+            h1{
+             font-size:25px;
+             text-align: left;
+             text-transform:capitalize;
+             font-color: white;
+                 
+         }
+         
+        .service-box{
+            margin-top:100px;
+            margin-left: 350px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom:10px;
+            perspective:1000px;
+            -webkit-perspective:1000px;
+        }
+        .service-icon{
+            width: 60%;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+            transition: all .5s ease;
+        }
+
+        .service-content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            width: 60%;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+            transition: all .5s ease;
+            background-color: grey;
+            backface-visibility:hidden;
+            transform-style: preserve-3d;
+            -webkit-transform: translateY(110px) rotateX(-90deg);
+            -moz-transform: translateY(110px) rotateX(-90deg);
+            -ms-transform: translateY(110px) rotateX(-90deg);
+            -o-transform: translateY(110px) rotateX(-90deg);
+            transform: translateY(110px) rotateX(-90deg);
+        }
+        .service-box .service-icon .front-content{
+            position: relative;
+            top:40px;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .service-box .service-icon .front-content i {
+            font-size: 28px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .service-box .service-icon .front-content h3 {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            margin-top:0px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+         .service-box .service-icon .front-content h2 {
+            font-size: 15px;
+            color: #fff;
+            text-align: center;
+            margin-top:0px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .service-box .service-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top:20px;
+            color: #fff;
+            margin-bottom:10px;
+            text-transform: uppercase;
+        }
+         .service-box .service-content a {
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top:20px;
+            color: #fff;
+            margin-bottom:10px;
+            text-transform: uppercase;
+        }
+        .service-box .service-content p {
+            font-size: 15px;
+            color: #fff;
+            margin:0;
+        }
+        .yellow{background-color: #ffc000;}
+        .orange{background-color: #fc7f0c;}
+        .red{background-color: #e84b3a;}
+        .grey{background-color: #474747;}
+        .service-box:hover .service-icon{
+            opacity: 0;
+            -webkit-transform: translateY(-110px) rotateX(90deg);
+            -moz-transform: translateY(-110px) rotateX(90deg);
+            -ms-transform: translateY(-110px) rotateX(90deg);
+            -o-transform: translateY(-110px) rotateX(90deg);
+            transform: translateY(-110px) rotateX(90deg);
+        }
+        .service-box:hover .service-content {
+            opacity: 1;
+            -webkit-transform: rotateX(0);
+            -moz-transform: rotateX(0);
+            -ms-transform: rotateX(0);
+            -o-transform: rotateX(0);
+            transform: rotateX(0);
+        }
+            
+        
+        .update{
+        }
+          h1{
+             font-size:25px;
+             text-align: left;
+             text-transform:capitalize;
+             font-color: white;
+                 
+         }
+         
+        .service-box1{
+            margin-top:100px;
+            margin-left: 350px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom:10px;
+            perspective:1000px;
+            -webkit-perspective:1000px;
+        }
+        .service-icon1{
+            width: 60%;
+            height: 100px;
+            padding: 20px;
+            margin-left: 40px;
+            text-align: center;
+            transition: all .5s ease;
+        }
+
+        .service-content1{
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            width: 60%;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+            transition: all .5s ease;
+            background-color: grey;
+            backface-visibility:hidden;
+            transform-style: preserve-3d;
+            -webkit-transform: translateY(110px) rotateX(-90deg);
+            -moz-transform: translateY(110px) rotateX(-90deg);
+            -ms-transform: translateY(110px) rotateX(-90deg);
+            -o-transform: translateY(110px) rotateX(-90deg);
+            transform: translateY(110px) rotateX(-90deg);
+        }
+        .service-box1 .service-icon1 .front-content1{
+            position: relative;
+            top:40px;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .service-box1 .service-icon1 .front-content1 i {
+            font-size: 28px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .service-box1 .service-icon1 .front-content1 h3 {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            margin-top:0px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+         .service-box1 .service-icon1 .front-content1 h2 {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            margin-top:0px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .service-box1 .service-content1 h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top:20px;
+            color: #fff;
+            margin-bottom:10px;
+            text-transform: uppercase;
+        }
+         .service-box1 .service-content1 a {
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top:20px;
+            color: #fff;
+            margin-bottom:10px;
+            text-transform: uppercase;
+        }
+        .service-box1 .service-content1 p {
+            font-size: 15px;
+            color: #fff;
+            margin:0;
+        }
+        .yellow{background-color: #ffc000;}
+        .orange{background-color: #fc7f0c;}
+        .red{background-color: #e84b3a;}
+        .grey{background-color: #474747;}
+        .service-box1:hover .service-icon1{
+            opacity: 0;
+            -webkit-transform: translateY(-110px) rotateX(90deg);
+            -moz-transform: translateY(-110px) rotateX(90deg);
+            -ms-transform: translateY(-110px) rotateX(90deg);
+            -o-transform: translateY(-110px) rotateX(90deg);
+            transform: translateY(-110px) rotateX(90deg);
+        }
+        .service-box1:hover .service-content1 {
+            opacity: 1;
+            -webkit-transform: rotateX(0);
+            -moz-transform: rotateX(0);
+            -ms-transform: rotateX(0);
+            -o-transform: rotateX(0);
+            transform: rotateX(0);
+        } 
+        
+        .view{
+            
+        }
+        .delete{
+            
+        }
+        .create,.view,.delete,.update{
+            display:none;
+        }
+      
+        </style>    
+            
+    </head>
+    <body>
+      <div class="h1">Bus Management System</div>
+       <div class="main">
+             <button class="btn" onclick="window.location.href='admin.html'">Home</button>    
+             <button class="btn" onclick="window.location.href='ContactUs.jsp'">Contact Us</button> 
+            <button class="btn" onclick="window.location.href='login.html'">Log Out</button>    
+            <div style="clear:both;"></div>
+        </div>
+    
+       <div class = "container"> 
+               <div class="left">
+          <marquee behavior="scroll" direction="right" scrollamount="7"><div class="h2">Choose the desired option:</div></marquee>
+         
+         <div class = "test">
+        <button class = "btnn" id="bt1">Search</button><br>
+        <button class = "btnn" id="bt2"> Schedule </button><br>
+        <button class = "btnn" id="bt3"> Driver Details </button><br>
+       
+       
+              </div> 
+               </div>
+           <div class="right">
+               <div class="default box" id="default"></div>
+         <div class="create box" id="create">     <!--create--> 
+                 <div class="container">
+    <div class="row">
+       
+            <div class="service-box">
+                <div class="service-icon yellow">
+                    <div class="front-content">  
+                        <h3>Description</h3>
+                        <h2>Search specific values from the schedule.</h2>
+                    </div>
+                </div>
+                <div class="service-content">
+                   
+                    <h3><a href="search.jsp">Click to search details..</a></h3>
+                </div>
+            </div>
+        </div>
+          
+        </div>
+        </div> <!-- create end-->
+              <div class="update box" id="update">   <!--update-->
+                   <div class="container">
+    <div class="row">
+       
+            <div class="service-box1">
+                <div class="service-icon1 yellow">
+                    <div class="front-content1">  
+                        <h3>Description</h3>
+                        <h2>View, update and delete the schedules.</h2>
+                    </div>
+                </div>
+                <div class="service-content1">
+                   
+                    <h3><a href="schedule.jsp">Click to make changes.</a></h3>
+                </div>
+            </div>
+        </div>
+          
+        </div>
+                 </div>
+        <div class="view box" id="view">   <!--view-->
+                   <div class="container">
+    <div class="row">
+       
+            <div class="service-box1">
+                <div class="service-icon1 yellow">
+                    <div class="front-content1">  
+                        <h3>Description</h3>
+                        <h2>View, update and delete driver details.</h2>
+                    </div>
+                </div>
+                <div class="service-content1">
+                   
+                    <h3><a href="driver.jsp">Click to make changes.</a></h3>
+                </div>
+            </div>
+        </div>
+          
+        </div>
+                 </div>
+      
+        </div>           
+        </div>
+<!--               <div style="clear:both;"></div>-->
+       
+<script>
+    $("#bt1").click(function(){
+        console.log("1");
+        $(".default").css('display','none');
+        $(".update").css('display','none');
+        $(".view").css('display','none');
+        $(".delete").css('display','none');
+        $(".create").css('display','flex');
+    });
+    $("#bt2").click(function(){
+        console.log("1");
+        $(".default").css('display','none');
+        $(".update").css('display','flex');
+        $(".view").css('display','none');
+        $(".delete").css('display','none');
+        $(".create").css('display','none');
+    });
+    $("#bt3").click(function(){
+        console.log("1");
+        $(".default").css('display','none');
+        $(".update").css('display','none');
+        $(".view").css('display','flex');
+        $(".delete").css('display','none');
+        $(".create").css('display','none');
+    });
+    $("#bt4").click(function(){
+        console.log("1");
+        $(".default").css('display','none');
+        $(".update").css('display','none');
+        $(".view").css('display','none');
+        $(".delete").css('display','flex');
+        $(".create").css('display','none');
+    });
+ 
+</script>
+    
+               
+    </body>
+</html>

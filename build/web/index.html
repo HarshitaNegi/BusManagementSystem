@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Landing page</title>
+        <style media = "screen">
+            
+            *{
+                margin: 0px;
+            }
+               .main{
+               background-image: url("bus.jpg");
+               height: 100vh;
+               background-size: cover;
+               background-position: center;
+               overflow: hidden;
+               }
+               .head{
+                   font-size:32px;
+                   color: white;
+                   position: relative;
+                   top: -100px;
+                   left: 500px;
+                   animation-name: ani1;
+                   animation-duration: 2s;
+                   animation-fill-mode: forwards;
+                   
+               }
+               @keyframes ani1{
+                   
+                   0%{
+                       // opacity: 0;
+                       top: -300px;
+                   }
+                   
+                   100%{
+                       // opacity: 1;
+                       top: 320px;
+                   }
+               }
+               
+               
+               .btn{
+                   background-color: #ff6600;
+                   color: white;
+                   text-decoration: none;
+                   border: none;
+                   padding: 12px 28px;
+                   border-radius: 10px;
+                   cursor: pointer;
+                   position: relative;
+                   opacity:0;
+                   font-size: 20px;
+                   top: 330px;
+                   left: 600px;
+                   animation-name: ani2;
+                   animation-duration: 2s;
+                   animation-delay: 2s;
+                   animation-fill-mode: forwards;
+               }
+                @keyframes ani2{
+                   
+                   0%{
+                       opacity: 0;
+                   }
+                   
+                   100%{
+                       opacity: 1;
+                   }
+               }
+               </style>
+    </head>
+    <body>
+        <div class="main">
+        <h1 class="head">Let's get the bus details handy..</h1><br>
+        <button class="btn"><a href = "login.html"><font color="white">Login</font></a></button>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.Driver" table="driverdetails">
+        <id name="id" type="java.lang.Integer"></id>
+        <property name="driverid" column="driverid"></property>
+        <property name="drivername" column="drivername"></property>
+        <property name="busno" column="busno"></property>
+        <property name="routeno" column="routeno"></property>
+        <property name="route" column="route"></property>
+    </class>
+</hibernate-mapping>
